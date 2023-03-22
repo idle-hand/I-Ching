@@ -1,0 +1,89 @@
+2 / 2
+
+Yes, you can create a random quote generator using HTML and JavaScript. Here's an example of how you could do it:
+
+HTML code:
+
+html
+Copy code
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Quote Generator</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Random Quote Generator</h1>
+		<p id="quote"></p>
+		<button id="generate-btn">Generate Quote</button>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
+In this code, we have created a basic HTML structure with a heading, a paragraph element to display the quote, and a button to generate a new quote. We have also added a link to an external CSS file and a script tag to load the JavaScript file.
+
+CSS code:
+
+css
+Copy code
+.container {
+	max-width: 600px;
+	margin: auto;
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+
+p {
+	font-size: 24px;
+	margin-bottom: 40px;
+}
+
+button {
+	font-size: 18px;
+	padding: 10px 20px;
+	background-color: #4CAF50;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+This CSS code is used to style the HTML elements. Here we have set the maximum width of the container to 600px, centered it on the page, and added some padding to the container. We have also styled the heading, paragraph, and button elements.
+
+JavaScript code:
+
+js
+Copy code
+const quotes = [
+	"Be the change you wish to see in the world.",
+	"In the end, it's not the years in your life that count. It's the life in your years.",
+	"The only way to do great work is to love what you do.",
+	"If you want to live a happy life, tie it to a goal, not to people or things.",
+	"Life is like a camera. Focus on the good times, develop from the negatives, and if things don't work out, take another shot."
+];
+
+const quoteElement = document.getElementById("quote");
+const generateBtn = document.getElementById("generate-btn");
+
+function generateQuote() {
+	const randomIndex = Math.floor(Math.random() * quotes.length);
+	const randomQuote = quotes[randomIndex];
+	quoteElement.textContent = randomQuote;
+}
+
+generateBtn.addEventListener("click", generateQuote);
+In this JavaScript code, we have created an array of quotes and stored it in a variable called quotes. We have also selected the quote paragraph element and the generate-btn button element using their respective IDs.
+
+The generateQuote function generates a random number between 0 and the length of the quotes array, and uses that number to select a random quote from the array. The selected quote is then assigned to the textContent property of the quoteElement paragraph element, which displays it on the page.
+
+Finally, we have added an event listener to the generateBtn button element, which calls the generateQuote function when the button is clicked.
+
+That's it! With these HTML, CSS, and JavaScript code snippets, you can create a random quote generator.
