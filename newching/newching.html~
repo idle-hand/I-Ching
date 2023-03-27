@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>I-Ching Quote Generator</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <style>
+      /* Add custom styles here */
+      #quote-container {
+        margin-top: 50px;
+      }
+      #quote {
+        font-size: 28px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      #hexagram {
+        font-size: 18px;
+      }
+      #new-quote {
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-container w3-center">
+      <h1 class="w3-margin-top">I-Ching Quote Generator</h1>
+      <div class="w3-card-4 w3-padding-large" id="quote-container">
+        <p id="quote"></p>
+        <p id="hexagram"></p>
+        <button class="w3-button w3-black" id="new-quote">New Quote</button>
+      </div>
+    </div>
+
+    <script src="davids-javascript.js"></script>
+  </body>
+</html>
